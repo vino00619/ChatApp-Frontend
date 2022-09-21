@@ -6,7 +6,7 @@ import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
 const appApi = createApi({
     reducerPath : 'appApi',
     baseQuery : fetchBaseQuery({
-        baseUrl : "https://chatapp-narenthar.herokuapp.com/"
+        baseUrl : "https://chatapp-main.herokuapp.com/"  
     }),
     endpoints : (builder) => ({
         // to create a user

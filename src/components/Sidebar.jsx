@@ -53,7 +53,7 @@ export const Sidebar = () => {
   });
 
   function getRooms() {
-    fetch("https://chatapp-narenthar.herokuapp.com/rooms")
+    fetch("https://chatapp-main.herokuapp.com/rooms")
       .then((res) => res.json())
       .then((data) => setRooms(data));
   }
