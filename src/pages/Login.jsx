@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 import {useLoginUserMutation} from "../services/appApi"
 import {AppContext} from "../context/appContext"
+import lock from "../assests/lock.jpg";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -70,7 +71,9 @@ export const Login = () => {
             </div>
           </Form>
         </Col>
-        <Col md={5} className="login__bg"></Col>
+        <Col md={5} className="login__bg">
+        <img src={lock} style={{height: "20rem", width: "25rem", paddingLeft: "40px"}} alt="lock" />
+        </Col>
       </Row>
     </Container>
   );

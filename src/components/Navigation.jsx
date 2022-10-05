@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav, Container, NavDropdown, Button } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import logo from "../assests/chaticon.png";
+import logo from "../assests/chaticon1.ico";
 import {useSelector} from "react-redux"
 import {useLogoutUserMutation} from "../services/appApi"
 
@@ -16,13 +16,16 @@ export const Navigation = () => {
 
   }
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" >
       <Container>
         <LinkContainer to="/">
-          <Navbar.Brand>
-            <img src={logo} style={{ width: 50, height: 50 }} alt="logo" />
-            <p style={{ fontSize: 12, color: "blue" }}>Chat Room</p>
+        <div className="nav" >
+        <Navbar.Brand style={{display: "flex"}}>
+            <img src={logo} style={{ width: 50, height: 50, cursor:"pointer" }} alt="logo" />
+            <p style={{ fontSize: "17px", color: "#003399", fontWeight: "Bold", paddingTop:"10px", cursor:"pointer"}}>Chat App</p>
           </Navbar.Brand>
+        </div>
+          
         </LinkContainer>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -30,7 +33,7 @@ export const Navigation = () => {
           <Nav className="ms-auto">
 {!user && (
 <LinkContainer to="/login">
-              <Nav.Link>Login</Nav.Link>
+              <Nav.Link >Login</Nav.Link>
             </LinkContainer>
             )}
 
