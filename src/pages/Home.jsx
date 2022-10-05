@@ -8,7 +8,7 @@ export const Home = () => {
     <Row>
         <Col md={4} className="d-flex flex-direction-column align-items-center justify-content-center">
             <div>
-                <h1>It's time to chat!!!</h1>
+                <h1>Let's Chat!!!</h1>
                 <p>Connect with the world & don't miss a word!!!</p>
                 <LinkContainer to="/chat">
                     <Button variant="primary">Get Started <i className="fas fa-comments home-message-icon"></i></Button>
